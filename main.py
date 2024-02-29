@@ -30,7 +30,7 @@ def main():
             output_file.write(f"{url}: {result}\n")
             contract_addresses.extend(result.split(", "))
 
-        list_file.write(",\n".join(contract_addresses) + "\n")
+        list_file.write(",\n".join(['"' + address + '"' for address in contract_addresses]) + "\n")
 
 if __name__ == "__main__":
     main()
