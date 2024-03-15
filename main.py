@@ -7,7 +7,7 @@ def process_url(url):
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
-        meta_tag = soup.select_one("head > meta:nth-child(14)")
+        meta_tag = soup.select_one("head > meta:nth-child(13)")
 
         if meta_tag:
             content_value = meta_tag.get("content")
